@@ -7,4 +7,7 @@ if (!isset($_SESSION['user_id'])) {
 ?>
 
 <h2>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</h2>
-<p><a href="../logout.php">Logout</a></p>
+<ul>
+    <li><a href="generate.php">Generate a Password</a></li>
+    <li><a href="../logout.php">Logout</a></li>
+</ul>
