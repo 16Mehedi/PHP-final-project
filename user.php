@@ -32,7 +32,10 @@ class User {
             session_start();
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
+             
 
+             //  Store plain password in session for AES decryption
+            $_SESSION['login_password'] = $password;
             // Set cookie for 7 days
             setcookie('username', $username, time() + (86400 * 7), "/");
 
